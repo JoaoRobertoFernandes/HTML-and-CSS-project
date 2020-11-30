@@ -46,6 +46,25 @@ img{max-width: 100%; border: none;}
 .row{
     float: left;
     width: 100%;
+    
+}
+
+/*loadmore*/
+.loadmore{
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.loadmore:hover{
+    color: #a70606;
+    border: 1px solid #ccc;
 }
 
 /*BOX*/
@@ -137,9 +156,15 @@ img{max-width: 100%; border: none;}
     width: 100%;
     padding-top: 30px;
     z-index: 6;
+    -webkit-transition:  all .5s ease-in-out;
+    transition:  all .5s ease-in-out;
 }
 .header .logo img{
     max-width: 150px;
+}
+.header.fixed{
+    background: #2c3e50;
+    padding: 10px 0 5px 0;
 }
 
 /*Section*/
@@ -228,6 +253,46 @@ img{max-width: 100%; border: none;}
     margin-bottom: 20px;
 }
 
+/*PARALLAX*/
+.parallax{
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    padding: 160px 0;
+    margin: 60px 0;
+    background-image: url(./images/bg-paralax.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.parallax h1{
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+.parallax button{
+    background: #f9014d;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.parallax button:hover{
+    background: #e92863;
+}
+
+/*HIGHLIGHTS*/
+.highlights-col{
+    margin-bottom: 20px;
+}
+
 /*MAX BREACKPOINTS*/
 @media (max-width: 767.9px){
     /*MENU*/
@@ -281,7 +346,7 @@ img{max-width: 100%; border: none;}
 
     .header .nav{
         float: right;
-        margin-top: 20px;
+        margin-top: 13px;
     }
     .header .nav ul li{
         display: inline-block;
@@ -314,6 +379,7 @@ img{max-width: 100%; border: none;}
     .destiny-col{
         width: 49%;
         margin-right: 2%;
+        margin-bottom: 2%;
         float: left;
     }
     .destiny-col:nth-child(odd){
@@ -321,6 +387,17 @@ img{max-width: 100%; border: none;}
     }
     .destiny-col:first-child{
         width: 100%;
+    }
+
+    /*HIGHLIGHTS*/
+    .highlights-col{
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        float: left;
+    }
+    .highlights-col:nth-of-type(2n+0){
+        margin-right: 0;
     }
 }
 
